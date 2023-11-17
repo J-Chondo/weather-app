@@ -31,7 +31,7 @@ app.get("/weather", async(req, res) =>
         weather = response.data;
     } catch (error) {
         weather = null;
-        error = error.message;
+        error = 'Error, Please try again';
     }
 
     // render the index template with the weather data and error
