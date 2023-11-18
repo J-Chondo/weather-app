@@ -1,7 +1,7 @@
 const express = require("express");
 const axios = require("axios");
 const app = express();
-const port = 3000;
+
 
 
 //set view engine to ejs
@@ -40,6 +40,7 @@ app.get("/weather", async(req, res) =>
 });
 
 // starting the server and listen on port 3000
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log("server running on port 3000");
 });
